@@ -13,7 +13,7 @@ export class ObjectReader extends BaseReader<ExpandObject> {
 
   /**
    * Parses the given document representation.
-   * 
+   *
    * @param node - node receive parsed XML nodes
    * @param obj - object to parse
    */

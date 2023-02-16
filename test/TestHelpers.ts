@@ -126,7 +126,7 @@ export default class TestHelpers {
 
   /**
    * Returns a string representation of the XML tree rooted at `node`.
-   * 
+   *
    * @param node - a DOM node
    * @param level - indentation level
    */

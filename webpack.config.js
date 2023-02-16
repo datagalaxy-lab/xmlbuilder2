@@ -21,7 +21,7 @@ module.exports = {
               presets: [
                 [
                   '@babel/preset-env',
-                  { 
+                  {
                     useBuiltIns: "usage",
                     modules: false,
                     corejs: 3,
@@ -45,6 +45,11 @@ module.exports = {
   },
   resolve: {
     extensions: [ '.tsx', '.ts', '.js' ],
+    fallback: {
+      "buffer": require.resolve("buffer/"),
+      "url": require.resolve("url/")
+    }
+
   },
   output: {
     filename: 'xmlbuilder2.min.js',

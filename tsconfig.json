@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-      "target": "ES5",
+      "target": "es2015",
       "module": "CommonJS",
       "declaration": true,
       "lib": [
           "ES5"
       ],
+      "strictBindCallApply": false,
       "downlevelIteration": true,
       "locale": "en",
       "strict": true,
