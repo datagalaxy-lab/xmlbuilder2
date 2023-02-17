@@ -4,12 +4,13 @@ An XML builder for [Node](https://nodejs.org/).
 
 [![License](https://badgen.net/github/license/oozcitak/xmlbuilder2)](http://opensource.org/licenses/MIT)
 
+[![NPM Version](https://img.shields.io/npm/v/@datagalaxy/xmlbuilder2)](https://www.npmjs.com/package/@datagalaxy/xmlbuilder2)
 [![CI](https://github.com/datagalaxy-lab/xmlbuilder2/actions/workflows/build.yml/badge.svg)](https://github.com/datagalaxy-lab/xmlbuilder2/actions/workflows/build.yml)
 
 ### Installation:
 
 ``` sh
-npm install xmlbuilder2
+npm i @datagalaxy/xmlbuilder2
 ```
 
 ### Documentation:
@@ -34,7 +35,7 @@ See: https://oozcitak.github.io/xmlbuilder2/
 can be created with the following function chain:
 
 ``` js
-const { create } = require('xmlbuilder2');
+const { create } = require('@datagalaxy/xmlbuilder2');
 
 const root = create({ version: '1.0' })
   .ele('root', { att: 'val' })
@@ -54,7 +55,7 @@ ___
 The same XML document can be created by converting a JS object into XML nodes:
 
 ``` js
-const { create } = require('xmlbuilder2');
+const { create } = require('@datagalaxy/xmlbuilder2');
 
 const obj = {
   root: {
@@ -74,7 +75,7 @@ ___
 
 `xmlbuilder2` can also parse and serialize XML documents from different formats:
 ```js
-const { create } = require('xmlbuilder2');
+const { create } = require('@datagalaxy/xmlbuilder2');
 
 const xmlStr = '<root att="val"><foo><bar>foobar</bar></foo></root>';
 const doc = create(xmlStr);
@@ -109,7 +110,7 @@ ___
 You can convert between formats in one go with the `convert` function:
 
 ```js
-const { convert } = require('xmlbuilder2');
+const { convert } = require('@datagalaxy/xmlbuilder2');
 
 const xmlStr = '<root att="val"><foo><bar>foobar</bar></foo></root>';
 const obj = convert(xmlStr, { format: "object" });
@@ -132,7 +133,7 @@ ___
 If you need to do some processing:
 
 ``` js
-const { create } = require('xmlbuilder2');
+const { create } = require('@datagalaxy/xmlbuilder2');
 
 const root = create().ele('squares');
 root.com('f(x) = x^2');
@@ -167,9 +168,9 @@ You can build the minified production bundle (`lib/xmlbuilder2.min.js`) after cl
 
 ```html
 <!-- latest version from jsDelivr -->
-<script src="https://cdn.jsdelivr.net/npm/xmlbuilder2/lib/xmlbuilder2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@datagalaxy/xmlbuilder2/lib/xmlbuilder2.min.js"></script>
 <!-- latest version from unpkg -->
-<script src="https://unpkg.com/xmlbuilder2/lib/xmlbuilder2.min.js"></script>
+<script src="https://unpkg.com/@datagalaxy/xmlbuilder2/lib/xmlbuilder2.min.js"></script>
 ```
 
 ### Donations:

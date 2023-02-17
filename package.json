@@ -1,26 +1,32 @@
 {
-  "name": "xmlbuilder2",
-  "version": "3.0.2",
+  "name": "@datagalaxy/xmlbuilder2",
+  "version": "4.0.0-rc.5",
   "keywords": [
     "xml",
     "xmlbuilder"
   ],
-  "homepage": "http://github.com/oozcitak/xmlbuilder2",
+  "homepage": "https://github.com/datagalaxy-lab/xmlbuilder2",
   "description": "An XML builder for node.js",
   "author": "Ozgur Ozcitak <oozcitak@gmail.com>",
-  "contributors": [],
+  "contributors": [
+    "Guillaume Grossetie <ggrossetie@yuzutech.fr>"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/oozcitak/xmlbuilder2.git"
+    "url": "git://github.com/datagalaxy-lab/xmlbuilder2.git"
   },
   "bugs": {
-    "url": "http://github.com/oozcitak/xmlbuilder2/issues"
+    "url": "https://github.com/datagalaxy-lab/xmlbuilder2/issues"
   },
   "main": "./lib/index",
   "browser": "./lib/xmlbuilder2.min.js",
   "engines": {
-    "node": ">=12.0"
+    "node": ">=14.0"
   },
   "files": [
     "lib/**/*"
@@ -78,7 +84,6 @@
     "perf": "npm run pretest && ts-node ./perf/perf.ts",
     "perf-cb": "npm run pretest && ts-node ./perf/perf-cb.ts",
     "prof-serialize": "npm run pretest && rm -f isolate-*-v8.log && node --prof ./perf/prof-serialize.js && find . -name isolate-*-v8.log -exec mv {} isolate-v8.log ; && node --prof-process isolate-v8.log > isolate-serialize.log && rm isolate-v8.log",
-    "postpublish": "git push --all && git push --tags",
     "servedocs": "(cd docs && bundle exec jekyll serve)"
   }
 }
